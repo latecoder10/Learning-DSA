@@ -618,4 +618,32 @@ class SubProg21 {
 
 }
 }
+//Q: Print the Fibonacci series up to n terms using recursion
+class SubProg22 {
+    public static void main(String[] args) {
+        int n = 5; // Example input
+        System.out.println("Fibonacci series up to " + n + " terms:");
+        for(int i = 0; i < n; i++){
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+
+    private static int fibonacci(int n) { //here n is the term number we want to find
+        if(n == 0){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
+        }
+        return fibonacci(n -1) + fibonacci(n -2);
+        //visualize this as the sum of the two preceding terms
+        //iteration steps for n=5:
+        //fibonacci(0) = 0
+        //fibonacci(1) = 1
+        //fibonacci(2) = fibonacci(1) + fibonacci(0) = 1 + 0 = 1
+        //fibonacci(3) = fibonacci(2) + fibonacci(1) = 1 + 1 = 2
+        //fibonacci(4) = fibonacci(3) + fibonacci(2) = 2 + 1 = 3
+        //so, the Fibonacci series up to 5 terms is: 0, 1, 1, 2, 3
+    }
+}
 
